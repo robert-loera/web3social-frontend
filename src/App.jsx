@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Register from "./components/Register";
+import Header from "./components/Header";
+import { UserContext } from "./context/UserContext";
 
 const App = () => {
   // create message we will be getting from root endpoint
   const [message, setMessage] = useState("")
+  // import token from UserContext
+  const [token] = useContext(UserContext)
   
   // function to make request to API
   const getWelcomeMessage = async () => {
@@ -30,12 +34,29 @@ const App = () => {
   useEffect(() => {
     getWelcomeMessage()
   }, [])
+
+  
   return (
-    <div>
-      <h1>{message}</h1>
-      {/* call  register function that returns all this html*/}
-      <Register/>
-    </div>
+    <>
+      <Header title={message}></Header>
+      <div className="columns">
+        <div className="column"></div>
+        <div className="column m-5 is-two-thirds">
+          {/* if the token does not exist return the register*/}
+          {
+            !token ? (
+              <div className="columns">
+                <Register /> <p>Login</p>
+              </div>
+            // if the token does existo return placeholder called table
+            ) : (
+              <p>Table</p>
+            )
+          }
+        </div>
+        <div className="column"></div>
+      </div>
+    </>
   );
 }
 
