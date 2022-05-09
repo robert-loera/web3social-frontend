@@ -22,7 +22,7 @@ const App = () => {
       },
     }
     // make the actual request
-    const response = await fetch("http://127.0.0.1:8000/", requestOptions)
+    const response = await fetch("https://web3socialz.herokuapp.com/", requestOptions)
     const data = await response.json()
 
     if (!response.ok) {
