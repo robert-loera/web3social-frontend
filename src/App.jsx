@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import Register from "./components/Register";
 import Header from "./components/Header";
+import Login from "./components/Login";
 import { UserContext } from "./context/UserContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   // create message we will be getting from root endpoint
@@ -38,24 +40,29 @@ const App = () => {
   
   return (
     <>
-      <Header title={message}></Header>
-      <div className="columns">
-        <div className="column"></div>
-        <div className="column m-5 is-two-thirds">
-          {/* if the token does not exist return the register*/}
-          {
-            !token ? (
-              <div className="columns">
-                <Register /> <p>Login</p>
-              </div>
-            // if the token does existo return placeholder called table
-            ) : (
-              <p>Table</p>
-            )
-          }
+      <Router>
+        <Header title={message}></Header>
+        <div className="columns" >
+          <div className="column"></div>
+          <div className="column m-5 is-two-thirds">
+            {/* if the token does not exist return the register*/}
+            {
+              !token ? (
+                <div className="columns">
+                  <Routes>
+                    <Route exact path="/register" element={<Register />} />
+                    <Route exact path="/login" element={<Login />} />
+                  </Routes>
+                </div>
+              // if the token does exist return placeholder called table
+              ) : (
+                <p>Table</p>
+              )
+            }
+          </div>
+          <div className="column"></div>
         </div>
-        <div className="column"></div>
-      </div>
+      </Router>
     </>
   );
 }
