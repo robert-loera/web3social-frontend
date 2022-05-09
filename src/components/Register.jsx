@@ -4,12 +4,12 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import ErrorMessage from "./ErrorMessage";
-
+import { StyledForm, Styledh1, StyledLabel, StyledInput } from "./Container.style";
 
 
 
 // create component
-const Register = () => {
+const Register = (className) => {
   // need these 5 for a user to login
   const [email, setEmail] = useState("")
   const [username, setUsername] = useState("")
@@ -92,12 +92,12 @@ const Login = async () => {
     // the styling for our form
     <div className="column">
       {/* when the form is submit run the function */}
-      <form className="box" onSubmit={handleSubmit}>
-        <h1 className="title has-text-centered">Register</h1>
+      <StyledForm className="box" onSubmit={handleSubmit}>
+        <Styledh1 className="title has-text-centered">Register</Styledh1>
         <div className="field">
-          <label className="label">Email Address</label>
+          <StyledLabel className="label">Email Address</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="email"
               placeholder="Enter email"
               value={email}
@@ -108,9 +108,9 @@ const Login = async () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Username</label>
+          <StyledLabel className="label">Username</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="username"
               placeholder="Enter username"
               value={username}
@@ -121,9 +121,9 @@ const Login = async () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Password</label>
+          <StyledLabel className="label">Password</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="password"
               placeholder="Enter password"
               value={password}
@@ -134,9 +134,9 @@ const Login = async () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Confirm Password</label>
+          <StyledLabel className="label">Confirm Password</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="password"
               placeholder="Enter password"
               value={confirmationPassword}
@@ -161,7 +161,7 @@ const Login = async () => {
               </span> </p>
           </div>
         </div>
-      </form>
+      </StyledForm>
     </div>
 
   )

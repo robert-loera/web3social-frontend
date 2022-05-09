@@ -2,6 +2,8 @@
 
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
+import { Styledh1 } from "./Container.style";
+
 
 // takes in title
 const Header = ({title}) => {
@@ -15,7 +17,7 @@ const Header = ({title}) => {
   // return html
   return (
     <div className="has-text-centered m-6">
-      <h1 className="title">{title}</h1>
+      <Styledh1 className="title">{title}</Styledh1>
       {/* logout button only displayed when user is logged in */}
       {/* if token exist display the logout button*/}
       {token && (<button className="button" onClick={handleLogout}>Logout</button>)}

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import { UserContext } from "./context/UserContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AppContainer } from "./components/Container.style";
 
 const App = () => {
   // create message we will be getting from root endpoint
@@ -39,7 +40,7 @@ const App = () => {
 
   
   return (
-    <>
+    <AppContainer>
       <Router>
         <Header title={message}></Header>
         <div className="columns" >
@@ -50,7 +51,7 @@ const App = () => {
               !token ? (
                 <div className="columns">
                   <Routes>
-                    <Route exact path="/register" element={<Register />} />
+                    <Route exact path="/" element={<Register />} />
                     <Route exact path="/login" element={<Login />} />
                   </Routes>
                 </div>
@@ -63,7 +64,7 @@ const App = () => {
           <div className="column"></div>
         </div>
       </Router>
-    </>
+    </AppContainer>
   );
 }
 

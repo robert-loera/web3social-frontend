@@ -3,9 +3,7 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import ErrorMessage from "./ErrorMessage";
-
-
-
+import { Link } from "react-router-dom";
 
 // create component
 const Login = () => {
@@ -103,7 +101,7 @@ const Login = () => {
             <p>Don't have an account?
                <span >
                 {/*put router link here*/}
-                <a href="/Register"> Sign up</a>
+                <Link to="/"> Sign up</Link>
               </span> </p>
           </div>
         </div>
