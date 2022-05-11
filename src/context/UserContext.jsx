@@ -35,7 +35,7 @@ export const UserProvider = (props) => {
   }, [token])
 
   return (
-    // token and setToken can noe be accessed by all children
+    // token and setToken can now be accessed by all children
     <UserContext.Provider value={[token, setToken]}>
       {/* use props.children when dont know children ahead of time */}
       {/* props is passed in the function call */}

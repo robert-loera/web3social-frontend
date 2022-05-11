@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import { UserContext } from "./context/UserContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AppContainer } from "./components/Container.style";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   // create message we will be getting from root endpoint
@@ -22,7 +23,7 @@ const App = () => {
       },
     }
     // make the actual request
-    const response = await fetch("https://web3socialz.herokuapp.com/", requestOptions)
+    const response = await fetch("http://127.0.0.1:8000/", requestOptions)
     const data = await response.json()
 
     if (!response.ok) {
@@ -55,9 +56,9 @@ const App = () => {
                     <Route exact path="/login" element={<Login />} />
                   </Routes>
                 </div>
-              // if the token does exist return placeholder called table
+              // if the token exists return placeholder called table
               ) : (
-                <p>Table</p>
+                <Sidebar/>
               )
             }
           </div>

@@ -30,7 +30,7 @@ const Register = (className) => {
     }
 
     // now make the request
-    const response = await fetch("https://web3socialz.herokuapp.com/users/", requestOptions)
+    const response = await fetch("http://127.0.0.1:8000/users", requestOptions)
 
     const data = await response.json()
 
@@ -59,7 +59,7 @@ const Login = async () => {
   }
 
   // now make the request to the login route
-  const response = await fetch("https://web3socialz.herokuapp.com/login", requestOptions)
+  const response = await fetch("http://127.0.0.1:8000/login", requestOptions)
   const data = await response.json()
 
   if (!response.ok){

@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import ErrorMessage from "./ErrorMessage";
 import { Link } from "react-router-dom";
+import { StyledForm, Styledh1, StyledLabel, StyledInput } from "./Container.style";
 
 // create component
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
     }
 
     // now make the request
-    const response = await fetch("https://web3socialz.herokuapp.com/login", requestOptions)
+    const response = await fetch("http://127.0.0.1:8000/login", requestOptions)
 
     const data = await response.json()
 
@@ -62,12 +63,12 @@ const Login = () => {
     // the styling for our form
     <div className="column">
       {/* when the form is submit run the function */}
-      <form className="box" onSubmit={handleSubmit}>
-        <h1 className="title has-text-centered">Login</h1>
+      <StyledForm className="box" onSubmit={handleSubmit}>
+        <Styledh1 className="title has-text-centered">Login</Styledh1>
         <div className="field">
-          <label className="label">Email Address</label>
+          <StyledLabel className="label">Email Address</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="email"
               placeholder="Enter email"
               value={email}
@@ -78,9 +79,9 @@ const Login = () => {
           </div>
         </div>
         <div className="field">
-          <label className="label">Password</label>
+          <StyledLabel className="label">Password</StyledLabel>
           <div className="control">
-            <input
+            <StyledInput
               type="password"
               placeholder="Enter password"
               value={password}
@@ -105,7 +106,7 @@ const Login = () => {
               </span> </p>
           </div>
         </div>
-      </form>
+      </StyledForm>
     </div>
 
   )
