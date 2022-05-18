@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import ErrorMessage from "./ErrorMessage";
 import { StyledForm, Styledh1, StyledLabel, StyledInput } from "./Container.style";
+import { useNavigate } from "react-router-dom";
 
 
 
 // create component
 const Register = (className) => {
+  let navigate = useNavigate()
   // need these 5 for a user to login
   const [email, setEmail] = useState("")
   const [username, setUsername] = useState("")
@@ -68,6 +70,7 @@ const Login = async () => {
   }
   else{
     setToken(data.access_token)
+    navigate("/home")
     console.log('user signed in')
   }
 }
@@ -155,7 +158,7 @@ const Login = async () => {
           </div>
           <div>
             <p>Already have an account?
-               <span >
+              <span >
                 {/*put router link here*/}
                 <Link to="/login"> Login</Link>
               </span> </p>
