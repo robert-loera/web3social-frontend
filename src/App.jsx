@@ -3,9 +3,11 @@ import Register from "./components/Register";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import { UserContext } from "./context/UserContext";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import { AppContainer } from "./components/Container.style";
 import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import Profile from "./components/Profile";
 
 const App = () => {
   // create message we will be getting from root endpoint
@@ -56,9 +58,15 @@ const App = () => {
                     <Route exact path="/login" element={<Login />} />
                   </Routes>
                 </div>
-              // if the token exists return placeholder called table
+              // if the token exists return home page
               ) : (
-                <Sidebar/>
+                <>
+                {/* <Feed/> */}
+                <Routes>
+                  <Route exact path="/home" element={<Feed/>}/>
+                  <Route exact path="/profile/:username" element={<Profile/>}/>
+                </Routes>
+                </>
               )
             }
           </div>

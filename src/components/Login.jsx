@@ -5,9 +5,11 @@ import { UserContext } from "../context/UserContext";
 import ErrorMessage from "./ErrorMessage";
 import { Link } from "react-router-dom";
 import { StyledForm, Styledh1, StyledLabel, StyledInput } from "./Container.style";
+import { useNavigate } from "react-router-dom";
 
 // create component
 const Login = () => {
+  let navigate = useNavigate()
   // need these 5 for a user to login
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -39,6 +41,7 @@ const Login = () => {
     }
     else{
       setToken(data.access_token)
+      navigate("/home")
       console.log('Login successful')
     }
   }
@@ -100,7 +103,7 @@ const Login = () => {
           </div>
           <div>
             <p>Don't have an account?
-               <span >
+              <span >
                 {/*put router link here*/}
                 <Link to="/"> Sign up</Link>
               </span> </p>

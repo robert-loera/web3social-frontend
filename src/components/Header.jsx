@@ -5,10 +5,12 @@ import { UserContext } from "../context/UserContext";
 import { StyledHeader } from "./Container.style";
 import { SLogoutButton } from "./Container.style";
 import { SHeader } from "./Container.style";
+import { useNavigate } from "react-router-dom";
 
 
 // takes in title
 const Header = ({title}) => {
+  let navigate = useNavigate()
   // we need the token from userContext.jsx
   const [token, setToken] = useContext(UserContext)
   console.log(token)
@@ -17,6 +19,7 @@ const Header = ({title}) => {
   // create function to handle logout
   const handleLogout = () => {
     setToken(null)
+    navigate("/")
   }
   // return html
   return (

@@ -41,13 +41,13 @@ const Sidebar = () => {
 
   return (
     <StyledSidebar>
-      <StyledLink to="#" top='22%'>Following</StyledLink>
+      <StyledLink to="#" top='22%'>Notifications</StyledLink>
       <StyledLink to="#" top='30%'>Explore</StyledLink>
       <StyledLink to="#" top='38%'>Messages</StyledLink>
       <StyledLink to="#" top='46%'>Watchlist</StyledLink>
       <StyledLink to="#" top='54%'>My Projects</StyledLink>
       <SIcon size={100} />
-      <SProfile to="profile"><span id='profile'></span> </SProfile>
+      <SProfile to={"/profile/"+username }><span id='profile'></span> </SProfile>
     </StyledSidebar>
   )
 }

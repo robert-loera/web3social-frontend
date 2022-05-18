@@ -56,10 +56,11 @@ export const StyledSidebar = styled.div`
   padding-top: 50px;
   /* padding-left: 3vw; */
   background-color: #141d26;
+  /* position: fixed; */
 `
 export const SHeader = styled.div`
   text-align: center;
-  height: 10vw;
+  height: 7vw;
   position: relative;
   padding-right: 15px;
 `
