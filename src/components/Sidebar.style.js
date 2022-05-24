@@ -37,5 +37,4 @@ export const SIcon = styled(FaIcons.FaEthereum)`
   position: absolute;
   bottom: 10%;
   color: darkcyan;
-
 `
