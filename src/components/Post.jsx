@@ -51,14 +51,14 @@ const Post = () => {
       <SPostContainer className="post">
         <div className="username">
           
-          <SHandle key={post.Post.owner.username}><SProfilePhoto></SProfilePhoto>@{post.Post.owner.username}</SHandle>
+          <SHandle key={post.Post.owner_username}><SProfilePhoto></SProfilePhoto>@{post.Post.owner_username}</SHandle>
           <div className="body">
             {posts ? (
               <>
                 <div key={post.Post.id}>
                   <SContent key={post.Post.id}>{post.Post.content}</SContent>
                   <SFooter>
-                  <SHandle key={post.Post.created_at}>{moment(post.Post.created_at).format("MMM Do YY")}</SHandle>
+                  <SHandle key={post.Post.created_at}>{moment(post.Post.created_at).format("M/D/YY, h:mm a")}</SHandle>
                   <SArrowUp></SArrowUp>
                   <SButton key={post.Post.image} onClick={() => buttonClicked(post.Post.id)}> 
                     <SArrowDown onClick={() => changeColor()}

@@ -8,6 +8,7 @@ import { AppContainer } from "./components/Container.style";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Profile from "./components/Profile";
+import Notifications from "./components/Notifications";
 
 const App = () => {
   // create message we will be getting from root endpoint
@@ -65,6 +66,7 @@ const App = () => {
                 <Routes>
                   <Route exact path="/home" element={<Feed/>}/>
                   <Route exact path="/profile/:username" element={<Profile/>}/>
+                  <Route exact path="/notifications" element={<Notifications/>}/>
                 </Routes>
                 </>
               )

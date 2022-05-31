@@ -116,7 +116,7 @@ const Profile = () =>  {
       </div>
 
       </>
-      } 
+      }
       
     </SDiv>
       <SProfileFeed>
@@ -125,7 +125,7 @@ const Profile = () =>  {
           return (
             <SPostContainer>
               <div className="username">
-                <SHandle key={post.Post.owner.username}><SProfilePhoto></SProfilePhoto>@{post.Post.owner.username}</SHandle>
+                <SHandle key={post.Post.owner_username}><SProfilePhoto></SProfilePhoto>@{post.Post.owner_username}</SHandle>
                 <div className="body">
                   <SContent key={post.Post.id}>{post.Post.content}</SContent>
                   <SFooter>

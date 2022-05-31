@@ -49,6 +49,7 @@ export const AppContainer = styled.div`
 export const StyledSidebar = styled.div`
   height: 100%;
   width: 18vw;
+  /* width: 160px; */
   position: absolute;
   left: 0;
   /* left: -9%; */

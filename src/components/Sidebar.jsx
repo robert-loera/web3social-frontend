@@ -41,8 +41,8 @@ const Sidebar = () => {
 
   return (
     <StyledSidebar>
-      <StyledLink to="/notifications" top='22%'>Notifications</StyledLink>
-      <StyledLink to="#" top='30%'>Explore</StyledLink>
+      <StyledLink to="/notifications" top='30%'>Notifications</StyledLink>
+      <StyledLink to="/home" top='22%'>Home</StyledLink>
       <StyledLink to="#" top='38%'>Messages</StyledLink>
       <StyledLink to="#" top='46%'>Watchlist</StyledLink>
       <StyledLink to="#" top='54%'>My Projects</StyledLink>
