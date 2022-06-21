@@ -33,7 +33,7 @@ export const StyledInput = styled.input`
     color: gray;
   }
   :-ms-input-placeholder {
-     color: red;
+    color: red;
   }
 `
 

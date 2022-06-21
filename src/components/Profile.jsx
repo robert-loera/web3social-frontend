@@ -15,7 +15,7 @@ const Profile = () =>  {
   const [rep, setRep] = useState(null)
   const [uid, setUid] = useState(null)
   const [posts, setPosts] = useState([])
-  const [buttonColor, setButtonColor] = useState('orange')
+  const [buttonColor, setButtonColor] = useState('gray')
 
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -86,10 +86,10 @@ const Profile = () =>  {
   }
 
     const changeColor = () => {
-    if (buttonColor === 'orange'){
-      setButtonColor('green')
+    if (buttonColor === 'gray'){
+      setButtonColor('red')
     }
-    else{setButtonColor('orange')}
+    else{setButtonColor('gray')}
   }
 
   return (
@@ -145,6 +145,15 @@ const Profile = () =>  {
             </SPostContainer>
           )
         })}
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </SProfileFeed>
     </>
   )

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import Sidebar from './Sidebar'
-import { NotiFeed, SNotiContainer, SNotiBody } from './Notifications.style'
+import { NotiFeed, SNotiContainer, SNotiBody, SLink, SDate } from './Notifications.style'
 import { useState } from 'react'
 import { UserContext } from "../context/UserContext";
 import { useContext } from 'react';
+import moment from 'moment'
 
 function Notifications() {
   const [notis, setNotis] = useState([])
@@ -52,19 +53,29 @@ function Notifications() {
             {(() => {
               if (noti.type === 'comment'){
                 return(
-                <SNotiBody>@{noti.username} commented on your post</SNotiBody>
+                  <>
+                <SNotiBody><SLink to={"/profile/"+noti.username}>@{noti.username}</SLink> commented on your post</SNotiBody>
+                <SDate>{moment(noti.created_at).format("M/D/YY, h:mm a")}</SDate>
+                </>
                 )
               }
               else if (noti.type === "vote"){
                 return(
-                <SNotiBody>@{noti.username} voted on your post</SNotiBody>
+                  <>
+                <SNotiBody><SLink to={"/profile/"+noti.username}>@{noti.username}</SLink> voted on your post</SNotiBody>
+                <SDate>{moment(noti.created_at).format("M/D/YY, h:mm a")}</SDate>
+                </>
                 )
               }
               else{
                 return(
-                <SNotiBody>@{noti.username} has given you rep</SNotiBody>
+                  <>
+                <SNotiBody><SLink to={"/profile/"+noti.username}>@{noti.username}</SLink> has given you rep</SNotiBody>
+                <SDate>{moment(noti.created_at).format("M/D/YY, h:mm a")}</SDate>
+                </>
                 )
               }
+              <h1>hello fjfdouhfdouhfdouhfouhFDOUH</h1>
             })()}
           </SNotiContainer>
         )

@@ -1,6 +1,6 @@
 import 'react-pro-sidebar/dist/css/styles.css';
 import { StyledSidebar } from './Container.style';
-import { StyledLink } from './Sidebar.style';
+import { StyledLink, SUnfinishedLink } from './Sidebar.style';
 import { SIcon } from './Sidebar.style';
 import { UserContext } from "../context/UserContext";
 import { useContext, useEffect, useState } from 'react';
@@ -43,9 +43,9 @@ const Sidebar = () => {
     <StyledSidebar>
       <StyledLink to="/notifications" top='30%'>Notifications</StyledLink>
       <StyledLink to="/home" top='22%'>Home</StyledLink>
-      <StyledLink to="#" top='38%'>Messages</StyledLink>
-      <StyledLink to="#" top='46%'>Watchlist</StyledLink>
-      <StyledLink to="#" top='54%'>My Projects</StyledLink>
+      <SUnfinishedLink to="#" top='38%'>Messages</SUnfinishedLink>
+      <SUnfinishedLink to="#" top='46%'>Watchlist</SUnfinishedLink>
+      <SUnfinishedLink to="#" top='54%'>My Projects</SUnfinishedLink>
       <SIcon size={100} />
       <SProfile to={"/profile/"+username }><span id='profile'></span> </SProfile>
     </StyledSidebar>

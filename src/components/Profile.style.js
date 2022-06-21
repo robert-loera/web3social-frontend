@@ -13,7 +13,7 @@ export const SRep = styled.h1`
   left: 20vw;
 `
 export const SPfp = styled.h1`
-  margin-left: 125px;
+  /* margin-left: 125px; */
   margin-right: 15px;
   border: 3px solid gray;
   position: relative;
@@ -29,7 +29,8 @@ export const SPfp = styled.h1`
 export const SDiv = styled.div`
   position: absolute;
   display: flex;
-  /* border: 1px solid red; */
+  padding-left: 0;
+  margin-left: 120px;
 `
 
 export const SError = styled.h1`

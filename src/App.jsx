@@ -2,10 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import Register from "./components/Register";
 import Header from "./components/Header";
 import Login from "./components/Login";
+import CreatePost from "./components/CreatePost";
 import { UserContext } from "./context/UserContext";
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import { AppContainer } from "./components/Container.style";
 import Sidebar from "./components/Sidebar";
+import Messages from "./components/Messages";
 import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import Notifications from "./components/Notifications";
@@ -67,6 +69,8 @@ const App = () => {
                   <Route exact path="/home" element={<Feed/>}/>
                   <Route exact path="/profile/:username" element={<Profile/>}/>
                   <Route exact path="/notifications" element={<Notifications/>}/>
+                  <Route exact path="/create/post" element={<CreatePost/>}/>
+                  <Route exact path="/messages" element={<Messages/>}/>
                 </Routes>
                 </>
               )

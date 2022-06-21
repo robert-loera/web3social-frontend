@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { SArrowUp, SPostContainer, SHandle, SContent, SProfilePhoto } from "./Feed.style"
 import { SFooter, SArrowDown, SComment, SButton } from './Feed.style'
 import moment from 'moment'
+import { SLink } from './Notifications.style'
 
 
 const Post = () => {
-  const [buttonColor, setButtonColor] = useState('orange')
+  const [buttonColor, setButtonColor] = useState('gray')
   const [posts, setPosts] = useState([])
 
   const FetchPosts = async () => {
@@ -37,12 +38,14 @@ const Post = () => {
     console.log(num)
   }
 
-  const changeColor = () => {
-    if (buttonColor === 'orange'){
-      setButtonColor('green')
+  const changeColor = (id) => {
+    if (buttonColor === 'gray'){
+      setButtonColor('red')
     }
-    else{setButtonColor('orange')}
+    else{setButtonColor('gray')}
   }
+
+
   return (
 
     <>
@@ -51,7 +54,7 @@ const Post = () => {
       <SPostContainer className="post">
         <div className="username">
           
-          <SHandle key={post.Post.owner_username}><SProfilePhoto></SProfilePhoto>@{post.Post.owner_username}</SHandle>
+          <SHandle key={post.Post.owner_username}><SProfilePhoto></SProfilePhoto><SLink to={"/profile/"+post.Post.owner_username}>@{post.Post.owner_username}</SLink></SHandle>
           <div className="body">
             {posts ? (
               <>
@@ -60,11 +63,11 @@ const Post = () => {
                   <SFooter>
                   <SHandle key={post.Post.created_at}>{moment(post.Post.created_at).format("M/D/YY, h:mm a")}</SHandle>
                   <SArrowUp></SArrowUp>
-                  <SButton key={post.Post.image} onClick={() => buttonClicked(post.Post.id)}> 
-                    <SArrowDown onClick={() => changeColor()}
+                  <SButton value={post.Post.id} key={post.Post.image} onClick={() => buttonClicked(post.Post.id)}> 
+                    <SArrowDown key={post.Post.id} onClick={() => changeColor(post.Post.id)}
                     style={{color: buttonColor}}/>
                   </SButton>
-                  <SComment></SComment>
+                  {/* <SComment></SComment> */}
                   </SFooter>
                 </div>
               </>
@@ -75,6 +78,10 @@ const Post = () => {
           </div>
         </div>
       </SPostContainer>)})}
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </>
     )
 }

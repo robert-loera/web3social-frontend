@@ -99,3 +99,48 @@ export const SButton = styled.button`
   background-color: #141d26;
   border: none;
 `
+
+export const SAddIcon = styled(FaIcons.FaPlus)`
+  position: absolute;
+  right: 38px;
+  bottom: 52px;
+  width: 33px;
+  height: 40px;
+  color: darkcyan;
+  /* border: 1px solid red; */
+`
+
+export const SDiv = styled.div`
+  width: 43vw;
+  max-width: 43vw;
+  margin: auto;
+`
+
+export const SCreatePostButton = styled.button`
+  cursor: pointer;
+`
+export const STextArea = styled.textarea`
+  color: black;
+  height: 200px;
+  background-color: #CECCCC;
+  border: 0px;
+  resize: none;
+`
+
+export const SFormFooter = styled.footer`
+  background-color: #CECCCC;
+`
+
+export const SFormButton = styled.button`
+  background-color: #03A062;
+  color: white;
+  width: 100%;
+  height: 150%;
+  border-radius: 10px;
+  &:disabled{
+    background-color: gray;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+`

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const NotiFeed = styled.div`
   position: relative;
@@ -34,6 +35,24 @@ export const SNotiBody = styled.h1`
   margin-top: 10px;
   margin-bottom: 3px;
   line-height: 21px;
-  /* padding-top: 10px; */
+  padding-top: 14px;
   text-align: center;
+`
+
+export const SLink = styled(Link)`
+  color: darkcyan;
+  &:hover{
+    color: darkcyan;
+  }
+`
+
+export const SDate = styled.h1`
+  color: white;
+  font-size: 16px;
+  padding-left: 6px;
+  padding-top: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 5px;
+  display: flex;
+
 `
