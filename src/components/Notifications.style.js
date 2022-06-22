@@ -57,6 +57,7 @@ export const SDate = styled.h1`
 `
 
 export const SEmptyNoti = styled.h1`
-  color: white;
-  font-size: 18px;
+  color: #fffff7;
+  font-size: 21px;
+  padding-left: 7px;
 `
