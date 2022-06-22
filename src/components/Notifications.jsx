@@ -43,7 +43,7 @@ function Notifications() {
     {notis.length === 0
     ?
     <NotiFeed>
-      <SEmptyNotis>No Notifications</SEmptyNotis>
+      <SEmptyNotis>Nooo Notifications</SEmptyNotis>
     </NotiFeed>
     :
     <NotiFeed>
