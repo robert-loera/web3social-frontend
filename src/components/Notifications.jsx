@@ -18,7 +18,8 @@ function Notifications() {
       
     }
 
-    const response = await fetch('http://127.0.0.1:8000/notifications/', requestOptions)
+    const response = await fetch('https://web3socialz.herokuapp.com/notifications', requestOptions) ///fgit status
+    
 
     const data = await response.json()
 
@@ -75,7 +76,6 @@ function Notifications() {
                 </>
                 )
               }
-              <h1>hello fjfdouhfdouhfdouhfouhFDOUH</h1>
             })()}
           </SNotiContainer>
         )

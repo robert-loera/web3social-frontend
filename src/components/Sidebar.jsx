@@ -21,7 +21,7 @@ const Sidebar = () => {
 
       }
       // make the request to the API
-      const response = await fetch("http://127.0.0.1:8000/usersme", requestOptions)
+      const response = await fetch("https://web3socialz.herokuapp.com/usersme", requestOptions)
 
       const data = await response.json()
 

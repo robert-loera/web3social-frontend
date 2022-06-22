@@ -19,7 +19,7 @@ export const UserProvider = (props) => {
       }
     }
     // make the request to the API
-    const response = await fetch("http://127.0.0.1:8000/usersme", requestOptions)
+    const response = await fetch("https://web3socialz.herokuapp.com/usersme", requestOptions)
 
     // if the response is not ok set the token to null
     if (!response.ok) {
