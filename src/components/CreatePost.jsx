@@ -17,7 +17,7 @@ const CreatePost = ({active, handleModal}) => {
       body: JSON.stringify({content: content})
     }
   
-  const response = await fetch('http://127.0.0.1:8000/posts/', requestOptions)
+  const response = await fetch('http://web3socialz.herokuapp.com/posts/', requestOptions)
 
     if (!response.ok){
       console.log('Error creating post')

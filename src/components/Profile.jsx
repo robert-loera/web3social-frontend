@@ -24,7 +24,7 @@ const Profile = () =>  {
         headers : {"Content-Type": "application/json"}
       }
 
-      const response = await fetch("http://127.0.0.1:8000/users/"+username, requestOptions)
+      const response = await fetch("http://web3socialz.herokuapp.com/users/"+username, requestOptions)
       const data = await response.json()
 
       // if the response is not ok set the error message
@@ -45,7 +45,7 @@ const Profile = () =>  {
         headers : {"Content-Type": "application/json"}
       }
 
-      const response = await fetch("http://127.0.0.1:8000/reputation/"+username, requestOptions)
+      const response = await fetch("http://web3socialz.herokuapp.com/reputation/"+username, requestOptions)
       const data = await response.json()
 
       // if the response is not ok set the error message
@@ -63,7 +63,7 @@ const Profile = () =>  {
         headers: {"Content-Type": "application/json"}
       }
 
-      const response = await fetch("http://127.0.0.1:8000/postsof/"+username, requestOptions)
+      const response = await fetch("http://web3socialz.herokuapp.com/postsof/"+username, requestOptions)
       const data = await response.json()
 
       if (!response.ok){
