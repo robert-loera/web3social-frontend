@@ -54,5 +54,9 @@ export const SDate = styled.h1`
   font-family: 'Courier New', Courier, monospace;
   margin-bottom: 5px;
   display: flex;
+`
 
+export const SEmptyNoti = styled.h1`
+  color: white;
+  font-size: 18px;
 `
