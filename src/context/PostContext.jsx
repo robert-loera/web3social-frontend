@@ -12,7 +12,7 @@ export const PostProvider = (props) => {
         headers: {"Content-Type": "application/json"}
       }
 
-      const response = await fetch('http://web3socialz.herokuapp.com/posts/', requestOptions)
+      const response = await fetch('https://web3socialz.herokuapp.com/posts/', requestOptions)
 
       const data = await response.json()
 

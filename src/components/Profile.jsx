@@ -24,7 +24,7 @@ const Profile = () =>  {
         headers : {"Content-Type": "application/json"}
       }
 
-      const response = await fetch("http://web3socialz.herokuapp.com/users/"+username, requestOptions)
+      const response = await fetch("https://web3socialz.herokuapp.com/users/"+username, requestOptions)
       const data = await response.json()
 
       // if the response is not ok set the error message
@@ -45,7 +45,7 @@ const Profile = () =>  {
         headers : {"Content-Type": "application/json"}
       }
 
-      const response = await fetch("http://web3socialz.herokuapp.com/reputation/"+username, requestOptions)
+      const response = await fetch("https://web3socialz.herokuapp.com/reputation/"+username, requestOptions)
       const data = await response.json()
 
       // if the response is not ok set the error message

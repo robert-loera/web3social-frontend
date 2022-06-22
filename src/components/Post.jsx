@@ -15,7 +15,7 @@ const Post = () => {
       headers: {"Content-Type": "application/json"}
     }
 
-    const response = await fetch('http://web3socialz.herokuapp.com/posts/?limit=25', requestOptions)
+    const response = await fetch('https://web3socialz.herokuapp.com/posts/?limit=25', requestOptions)
 
     const data = await response.json()
 
