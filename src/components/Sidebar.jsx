@@ -15,6 +15,7 @@ const Sidebar = () => {
   useEffect(() => {
     const FetchUsername = async () => {
       const requestOptions = {
+        mode: 'no-cors',
         method: "GET",
         headers: {"Content-Type": "application/json",
                   Authorization: "Bearer " + token},

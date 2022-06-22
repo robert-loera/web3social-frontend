@@ -11,6 +11,7 @@ export const UserProvider = (props) => {
     // function to fetch the user from the API
     const fetchUser = async () => {
       const requestOptions = {
+        mode: 'no-cors',
         method: "GET",
         headers: {
           "Content-Type": 'application/json',
