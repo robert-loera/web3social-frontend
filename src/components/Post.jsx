@@ -11,6 +11,7 @@ const Post = () => {
 
   const FetchPosts = async () => {
     const requestOptions = {
+      mode: 'no-cors',
       method: "GET",
       headers: {"Content-Type": "application/json"}
     }
