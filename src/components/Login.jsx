@@ -28,7 +28,7 @@ const Login = () => {
     }
 
     // now make the request
-    const response = await fetch("http://web3socialz.herokuapp.com/login", requestOptions)
+    const response = await fetch("https://web3socialz.herokuapp.com/login", requestOptions)
 
     const data = await response.json()
 
