@@ -13,7 +13,7 @@ const CreatePost = ({active, handleModal}) => {
     const requestOptions = {
       method: "POST",
       headers: {"Content-Type": "application/json",
-      Authorization: "Bearer " + token},
+      Authorization: "Bearer " + token}, ///this is new production branch
       body: JSON.stringify({content: content})
     }
   
