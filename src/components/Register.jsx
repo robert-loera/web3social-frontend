@@ -61,7 +61,7 @@ const Login = async () => {
   }
 
   // now make the request to the login route
-  const response = await fetch("http://127.0.0.1:8000/login", requestOptions)
+  const response = await fetch("http://web3socialz.herokuapp.com/login", requestOptions)
   const data = await response.json()
 
   if (!response.ok){

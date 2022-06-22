@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Sidebar from './Sidebar'
-import { NotiFeed, SNotiContainer, SNotiBody, SLink, SDate } from './Notifications.style'
+import { NotiFeed, SNotiContainer, SNotiBody, SLink, SDate, SEmptyNotis } from './Notifications.style'
 import { useState } from 'react'
 import { UserContext } from "../context/UserContext";
 import { useContext } from 'react';
@@ -43,7 +43,7 @@ function Notifications() {
     {notis.length === 0
     ?
     <NotiFeed>
-      <h1>No Notifications</h1>
+      <SEmptyNotis>No Notifications</SEmptyNotis>
     </NotiFeed>
     :
     <NotiFeed>
