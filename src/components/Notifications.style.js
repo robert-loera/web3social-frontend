@@ -56,7 +56,7 @@ export const SDate = styled.h1`
   display: flex;
 `
 
-export const SEmptyNoti = styled.h1`
+export const SEmptyNotis = styled.h1`
   color: #fffff7;
   font-size: 21px;
   padding-left: 7px;
