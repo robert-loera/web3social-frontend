@@ -18,7 +18,7 @@ const Sidebar = () => {
         mode: 'no-cors',
         method: "GET",
         headers: {"Content-Type": "application/json",
-                  Authorization: "Bearer " + token},
+                'Authorization': "Bearer " + token},
 
       }
       // make the request to the API

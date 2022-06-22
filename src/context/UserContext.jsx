@@ -16,7 +16,7 @@ export const UserProvider = (props) => {
         headers: {
           "Content-Type": 'application/json',
           // pass the auth type and token value for auth
-          Authorization: "Bearer " + token
+          'Authorization': "Bearer " + token
       }
     }
     // make the request to the API
